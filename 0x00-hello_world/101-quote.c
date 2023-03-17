@@ -1,4 +1,5 @@
 #include <unistd.h>
+
 /**
  *main - Entry point of the code
  *void - main function take no arguments
