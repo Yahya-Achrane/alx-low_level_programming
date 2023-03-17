@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+ *main - Entry point of the code
+ *void - main function take no arguments
+ *Return: Always 0 (Success)
+ */
 
 int main(void)
 {
@@ -6,7 +11,7 @@ int main(void)
 	char myChar;
 	long int myLongInt;
 	float myFloat;
-	long myLongLongInt;
+	long  long myLongLongInt;
 
 	printf("Size of a char: %lu byte(s)\n", sizeof(myChar));
 	printf("Size of an int: %lu byte(s)\n", sizeof(myInt));
