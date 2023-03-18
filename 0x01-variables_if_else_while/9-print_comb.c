@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - program that  prints all possible combination of single-digit numbers.
+ * main - program that  prints all possible combination of single-digit numbers
  *
  * Return: 0
 */
