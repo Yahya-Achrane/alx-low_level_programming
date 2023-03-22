@@ -2,10 +2,10 @@
 /**
  * add - adds two integers and returns the result
  *
- * @a: first integer
- * @b: second integer
+ * @x: first integer
+ * @y: second integer
  *
- * Return: sum of a and b
+ * Return: sum of x and y
 */
 int add(int x, int y)
 {
