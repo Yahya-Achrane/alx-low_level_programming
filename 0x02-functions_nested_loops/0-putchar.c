@@ -1,25 +1,20 @@
-#include<unistd.h>
+#include<stdio.h>
 
 /**
   * main - the main entry of the program
   *
   * Return: Always 0 (secusess)
   */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	int i = 0;
+	char array[8] = "_putchar";
+
+	while (i < 8)
+	{
+		putchar (array[i]);
+		i++;
+	}
+	putchar ('\n');
 	return (0);
 }
