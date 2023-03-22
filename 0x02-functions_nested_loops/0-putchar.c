@@ -1,9 +1,7 @@
-#include<stdio.h>
-
+#include "main.h"
 /**
   * main - the main entry of the program
-  *
-  * Return: Always 0 (secusess)
+  * Return: Always 0 (success)
   */
 int main(void)
 {
@@ -12,9 +10,9 @@ int main(void)
 
 	while (i < 8)
 	{
-		putchar (array[i]);
+		_putchar (array[i]);
 		i++;
 	}
-	putchar ('\n');
+	_putchar ('\n');
 	return (0);
 }
