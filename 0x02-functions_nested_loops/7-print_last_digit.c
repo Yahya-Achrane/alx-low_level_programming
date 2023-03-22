@@ -1,8 +1,11 @@
 #include "main.h"
 /**
- * a program that prints the last digit of a givin number
- * Return: i
- */
+ * print_last_digit - prints the last digit of a number
+ *
+ * @n: number to be checked
+ *
+ * Return: last digit of n
+*/
 int print_last_digit(int i)
 {
 	i = i % 10;

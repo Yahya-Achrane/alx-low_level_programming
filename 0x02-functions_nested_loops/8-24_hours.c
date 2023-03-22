@@ -1,11 +1,13 @@
 #include "main.h"
 /**
- * A function that prints every minute of the day of jack bauer 
+ * jack_bauer - prints every minute of the day of Jack Bauer
+ *
  * Return: void
- */
+*/
 void jack_bauer(void)
 {
 	int ht, ho, min_t, min_o, h_max;
+
 	h_max = 58;
 	ht = '0';
 

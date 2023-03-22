@@ -1,8 +1,12 @@
 #include "main.h"
 /**
- * a program that checks if the value given is + or - or 0
- * Return: 1 if positive,-1 if negative, 0 if is null
- */
+* print_sign - prints the sign of a number
+ *
+ * @n: number to be checked
+ *
+ * Return: 1 if n is greater than zero, 0 if n is zero,
+ *			-1 if n is less than zero
+*/
 int print_sign(int n)
 {
 	if (n > 0)
