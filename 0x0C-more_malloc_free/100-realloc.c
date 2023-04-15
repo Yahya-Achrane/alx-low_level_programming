@@ -2,45 +2,65 @@
 #include <stdlib.h>
 
 /**
- * *_realloc - realloc func
- * @ptr: void
- * @old_size: old by
- * @new_size: new by
- * Return: ptr if new == old, 0 if new_s == 0 and ptr != NULL
+ * __memcpy - copies memory area.
+ * @dest: memory area to copy to.
+ * @src: memory area to copy from.
+ * @n: bytes of memory.
+ * Return: a pointer to dest.
+ */
+
+char *__memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
+}
+
+/**
+ * _realloc - reallocates a memory block using malloc and free
+ * @ptr: pointer to the memory previously allocated
+ * @old_size: the size, in bytes, of the allocated space for ptr
+ * @new_size: the new size, in bytes of the new memory block
+ * Return: pointer is worked, NULL otherwise.
  */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int i;
-	char *ptr2, *data;
-	void *sum;
+	void *pointer;
 
-	if (new_size == old_size)
-	{
+	if (old_size == new_size)
 		return (ptr);
-	} else if (new_size == 0 && ptr != NULL)
+	if (!ptr)
 	{
-		free(ptr);
-		return (NULL);
-	}
-	if (ptr == NULL)
-	{
-		sum = malloc(new_size);
-		if (sum == NULL)
+		pointer = malloc(new_size);
+		if (!pointer)
 			return (NULL);
-		return (sum);
+		return (pointer);
 	}
-
-	ptr2 = ptr;
-	sum = malloc(sizeof(ptr2) * new_size);
-	if (sum == NULL)
+	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	data = sum;
-	for (i = 0; i < old_size && i < new_size; i++)
-		data[i] = *ptr2++;
-	free(ptr);
-	return (sum);
+	pointer = malloc(new_size);
+	if (!pointer)
+		return (NULL);
+	if (new_size < old_size)
+	{
+		__memcpy(pointer, ptr, new_size);
+		free(ptr);
+		return (pointer);
+	}
+	else
+	{
+		__memcpy(pointer, ptr, old_size);
+		free(ptr);
+		return (pointer);
+	}
 }
