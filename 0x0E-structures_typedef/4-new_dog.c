@@ -4,7 +4,7 @@
 /**
  * _strlen - length of string
  * @s: string
- * Return: length 
+ * Return: length
  */
 int _strlen(char *s)
 {
@@ -37,8 +37,8 @@ char *_strcpy(char *dest, char *src)
 /**
  * new_dog - creates a new dog
  * @name: name of old struct
- * @age: age 
- * @owner: owner 
+ * @age: age
+ * @owner: owner
  * Return:struct
  */
 dog_t *new_dog(char *name, float age, char *owner)
