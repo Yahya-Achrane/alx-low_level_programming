@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "cStandard": "gnu89",
+            "compilerPath": "C:\\msys64\\mingw64\\bin"
+        }
+    ],
+    "version": 4
+}
